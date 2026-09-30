@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alimento que Abraça - Cadastro</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<a class="pular-link" href="#conteudo">Ir para o conteúdo</a>
+<header class="cabecalho">
+<div class="container barra">
+<p class="marca">Alimento que Abraça</p>
+<input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
+<label for="menu-toggle" class="menu-botao"><span class="icone"></span></label>
+<nav class="menu" aria-label="Principal">
+<ul>
+<li><a href="../index.html">Início</a></li>
+<li class="tem-submenu">
+<a href="projetos.html">Projetos</a>
+<ul class="submenu">
+<li><a href="projetos.html#alimentos">Doação de alimentos</a></li>
+<li><a href="projetos.html#voluntariado">Voluntariado</a></li>
+<li><a href="projetos.html#marmitas">Marmitas</a></li>
+</ul>
+</li>
+<li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="conteudo" class="container">
+<h1>Cadastro</h1>
+<form action="#" method="post">
+<fieldset>
+<legend>Dados pessoais</legend>
+<div class="grid">
+<div class="campo col-12">
+<label for="nome">Nome completo:</label>
+<input type="text" id="nome" name="nome" required>
+</div>
+<div class="campo col-6">
+<label for="email">E-mail:</label>
+<input type="email" id="email" name="email" required>
+</div>
+<div class="campo col-6">
+<label for="nascimento">Data de nascimento:</label>
+<input type="date" id="nascimento" name="nascimento" required>
+</div>
+<div class="campo col-4">
+<label for="cpf">CPF:</label>
+<input type="text" id="cpf" name="cpf" inputmode="numeric" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" title="Use o formato 000.000.000-00" placeholder="000.000.000-00" required>
+</div>
+<div class="campo col-4">
+<label for="telefone">Telefone:</label>
+<input type="tel" id="telefone" name="telefone" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" title="Use o formato (11) 99999-9999" placeholder="(11) 99999-9999" required>
+</div>
+<div class="campo col-4">
+<label for="senha">Senha:</label>
+<input type="password" id="senha" name="senha" minlength="8" required>
+</div>
+</div>
+</fieldset>
+<fieldset>
+<legend>Endereço</legend>
+<div class="grid">
+<div class="campo col-12">
+<label for="endereco">Endereço:</label>
+<input type="text" id="endereco" name="endereco" required>
+</div>
+<div class="campo col-5">
+<label for="cidade">Cidade:</label>
+<input type="text" id="cidade" name="cidade" required>
+</div>
+<div class="campo col-3">
+<label for="estado">Estado:</label>
+<input type="text" id="estado" name="estado" required>
+</div>
+<div class="campo col-4">
+<label for="cep">CEP:</label>
+<input type="text" id="cep" name="cep" inputmode="numeric" pattern="[0-9]{5}-[0-9]{3}" title="Use o formato 00000-000" placeholder="00000-000" required>
+</div>
+</div>
+</fieldset>
+<fieldset>
+<legend>Forma de participação</legend>
+<div class="grid">
+<div class="campo col-4">
+<label><input type="radio" name="participacao" value="alimentos" required> Doação de alimentos</label>
+</div>
+<div class="campo col-4">
+<label><input type="radio" name="participacao" value="voluntariado"> Voluntariado</label>
+</div>
+<div class="campo col-4">
+<label><input type="radio" name="participacao" value="financeira"> Doação financeira</label>
+</div>
+</div>
+</fieldset>
+<p><label><input type="checkbox" name="termos" required> Aceito os termos</label></p>
+<button type="submit" class="botao">Enviar</button>
+</form>
+</main>
+<footer class="rodape">
+<div class="container">
+<h2>Contato</h2>
+<p>E-mail: contato@alimentoqueabraca.org</p>
+<p>Telefone: (11) 99999-9999</p>
+<p>Instagram: @alimentoqueabraca</p>
+</div>
+</footer>
+</body>
+</html>
