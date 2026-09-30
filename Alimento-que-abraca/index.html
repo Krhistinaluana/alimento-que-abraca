@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alimento que Abraça</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="pular-link" href="#conteudo">Ir para o conteúdo</a>
+<header class="cabecalho">
+<div class="container barra">
+<p class="marca">Alimento que Abraça</p>
+<input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir menu" aria-controls="menu-principal" aria-expanded="false">
+<label for="menu-toggle" class="menu-botao"><span class="icone"></span></label>
+<nav class="menu" id="menu-principal" aria-label="Principal">
+<ul>
+<li><a href="#/" data-rota="/">Início</a></li>
+<li class="tem-submenu">
+<a href="#/projetos" data-rota="/projetos">Projetos</a>
+<ul class="submenu">
+<li><a href="#/projetos/alimentos">Doação de alimentos</a></li>
+<li><a href="#/projetos/voluntariado">Voluntariado</a></li>
+<li><a href="#/projetos/marmitas">Marmitas</a></li>
+</ul>
+</li>
+<li><a href="#/cadastro" data-rota="/cadastro">Cadastro</a></li>
+<li><a href="#/componentes" data-rota="/componentes">Componentes</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="conteudo" tabindex="-1">
+<noscript>
+<h1>Alimento que Abraça</h1>
+<p>Este site precisa de JavaScript. Versões estáticas: <a href="html/projetos.html">Projetos</a>, <a href="html/cadastro.html">Cadastro</a>.</p>
+</noscript>
+</main>
+<footer class="rodape">
+<div class="container">
+<h2>Contato</h2>
+<p>E-mail: contato@alimentoqueabraca.org</p>
+<p>Telefone: (11) 99999-9999</p>
+<p>Instagram: @alimentoqueabraca</p>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/dayjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/locale/pt-br.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

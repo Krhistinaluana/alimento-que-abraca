@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alimento que Abraça - Componentes</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<a class="pular-link" href="#conteudo">Ir para o conteúdo</a>
+<header class="cabecalho">
+<div class="container barra">
+<p class="marca">Alimento que Abraça</p>
+<input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir menu" aria-controls="menu-principal" aria-expanded="false">
+<label for="menu-toggle" class="menu-botao"><span class="icone"></span></label>
+<nav class="menu" id="menu-principal" aria-label="Principal">
+<ul>
+<li><a href="../index.html">Início</a></li>
+<li class="tem-submenu">
+<a href="projetos.html">Projetos</a>
+<ul class="submenu">
+<li><a href="projetos.html#alimentos">Doação de alimentos</a></li>
+<li><a href="projetos.html#voluntariado">Voluntariado</a></li>
+<li><a href="projetos.html#marmitas">Marmitas</a></li>
+</ul>
+</li>
+<li><a href="cadastro.html">Cadastro</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="conteudo">
+<section class="secao container">
+<h1>Componentes de feedback</h1>
+<p>Guia de estilos com badges, alertas e modal, seguindo a paleta do design system.</p>
+</section>
+<section class="secao container" id="badges">
+<h2>Badges</h2>
+<p>
+<span class="badge badge-primario">Novo</span>
+<span class="badge badge-sucesso">Campanha ativa</span>
+<span class="badge badge-aviso">Vagas limitadas</span>
+<span class="badge badge-erro">Encerrada</span>
+<span class="badge badge-neutro">Em breve</span>
+</p>
+</section>
+<section class="secao container" id="alertas">
+<h2>Alertas</h2>
+<div class="alerta alerta-sucesso" role="status">
+<div><strong>Cadastro enviado!</strong> Obrigada por ajudar o Alimento que Abraça.</div>
+</div>
+<div class="alerta alerta-erro" role="alert">
+<div><strong>Não foi possível enviar.</strong> Confira o CPF e tente novamente.</div>
+</div>
+<div class="alerta alerta-aviso" role="alert">
+<div><strong>Atenção!</strong> As vagas de voluntariado deste mês são limitadas.</div>
+</div>
+<div class="alerta alerta-info" role="status">
+<div><strong>Você sabia?</strong> As mini cestas não precisam de cozimento nem refrigeração.</div>
+</div>
+</section>
+<section class="secao container" id="modais">
+<h2>Modal</h2>
+<p><a class="botao" href="#modal-voluntario">Abrir modal</a></p>
+<div class="modal" id="modal-voluntario" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" aria-describedby="modal-descricao">
+<div class="modal-caixa">
+<h2 id="modal-titulo">Quero ser voluntário</h2>
+<p id="modal-descricao">Ajude na preparação e na distribuição das marmitas. Faça seu cadastro e entraremos em contato.</p>
+<div class="modal-acoes">
+<a class="botao" href="cadastro.html">Ir para o cadastro</a>
+<a class="botao botao-secundario" href="#modais">Fechar</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="rodape">
+<div class="container">
+<h2>Contato</h2>
+<p>E-mail: contato@alimentoqueabraca.org</p>
+<p>Telefone: (11) 99999-9999</p>
+<p>Instagram: @alimentoqueabraca</p>
+</div>
+</footer>
+<script type="module" src="../js/pagina-estatica.js"></script>
+</body>
+</html>
