@@ -1,49 +1,94 @@
 # Alimento que Abraça
 
-Site estático de apresentação do projeto social Alimento que Abraça, desenvolvido como aplicação de front-end responsiva para divulgar iniciativas de combate à fome e permitir cadastros demonstrativos de participação.
+Site de uma ONG fictícia que combate a fome entre famílias com crianças e adolescentes em situação de rua. Projeto acadêmico da disciplina de Desenvolvimento Front-end (Engenharia de Software, Universidade Cruzeiro do Sul).
+
+## Demonstração
+
+Site publicado: https://krhistinaluana.github.io/alimento-que-abraca/
+
+## Sobre o projeto
+
+O Alimento que Abraça nasceu de pessoas que já viveram a fome e decidiram transformar essa experiência em ajuda. O site apresenta a ONG, suas ações (marmitas prontas e mini cestas básicas) e as formas de contribuir: doação de alimentos, voluntariado, doação financeira e divulgação.
 
 ## Funcionalidades
 
-- Navegação por hash com páginas de início, projetos, cadastro e componentes.
-- Páginas HTML estáticas de projetos, cadastro e componentes como alternativa à aplicação SPA.
-- Formulário com máscaras, validação de campos, acessibilidade por teclado e salvamento de rascunho.
-- Lista demonstrativa de cadastros e rascunhos armazenados no navegador.
-- Layout responsivo e preferência por movimento reduzido.
+- Página única (SPA) com rotas por hash: início, projetos, cadastro e componentes.
+- Menu responsivo com dropdown no computador e hambúrguer no celular.
+- Layout com Grid de 12 colunas e 5 breakpoints (480, 768, 1024, 1280 e 1600 px).
+- Formulário de cadastro com máscaras (CPF, telefone e CEP), validação com RegEx e mensagens de erro.
+- Rascunho do formulário e cadastros enviados guardados no navegador (localStorage).
+- Componentes de feedback: badges, alertas e modal.
 
 ## Tecnologias
 
-- HTML5 semântico e CSS responsivo.
-- JavaScript moderno com módulos ES e sem etapa de compilação.
-- `localStorage` para persistência local neste navegador.
-- Day.js 1.11.13 carregado por CDN na página principal.
+- HTML5 semântico
+- CSS3: variáveis (design system), Grid, Flexbox e media queries
+- JavaScript com ES Modules (sem framework)
+- Day.js (formatação de datas, via CDN)
+- Git e GitHub (versionamento, GitFlow)
 
-## Estrutura
+## Estrutura de pastas
 
-O código do site está na pasta `Alimento-que-abraca/`:
-
-```text
+```
 Alimento-que-abraca/
-|-- index.html
-|-- css/style.css
-|-- html/                 # versões estáticas de cadastro, componentes e projetos
-|-- imagens/              # fotografias usadas pelo site
-`-- js/                   # roteador, templates, formulário, validação e armazenamento
+├── index.html          # página inicial (shell da SPA)
+├── css/
+│   └── style.css       # design system, layout e componentes
+├── html/               # versões estáticas das páginas
+├── imagens/            # marmitas e cestas (JPG e PNG)
+└── js/
+    ├── main.js         # ponto de entrada
+    ├── router.js       # rotas e renderização
+    ├── templates.js    # HTML de cada página
+    ├── componentes.js  # cartão, badge e alerta
+    ├── dados.js        # conteúdos reutilizáveis
+    ├── storage.js      # localStorage
+    ├── mascaras.js     # máscaras de digitação
+    ├── validacao.js    # regras e estados de erro
+    ├── formulario.js   # eventos do formulário
+    ├── menu.js         # menu mobile e tecla Esc
+    └── utils.js        # funções auxiliares
 ```
 
-## Executar localmente
+## Como executar
 
-Como o site usa módulos JavaScript, abra-o por um servidor HTTP local em vez de usar `file://`. Na raiz deste repositório, execute:
+**Pré-requisitos:** Visual Studio Code com a extensão Live Server (ou qualquer servidor local).
 
-```powershell
-py -m http.server 8000 --directory Alimento-que-abraca
-```
+1. Clone o repositório:
+   ```
+   git clone https://github.com/Krhistinaluana/alimento-que-abraca.git
+   ```
+2. Abra a pasta no VS Code.
+3. Clique com o botão direito em `index.html` e escolha **Open with Live Server**.
 
-Depois, acesse <http://localhost:8000> no navegador. Encerre o servidor com `Ctrl+C`.
+O projeto usa módulos ES, que não funcionam abrindo o arquivo com duplo clique (`file://`). Não há dependências para instalar nem etapa de build.
 
-## Dados e privacidade
+## Testes
 
-Este projeto é uma demonstração de front-end e não envia cadastros a um servidor. Os cadastros demonstrativos ficam no `localStorage` do navegador atual; rascunhos incluem dados como nome, e-mail e endereço, mas não armazenam CPF nem senha. Limpar os dados do site no navegador remove essas informações. Não use dados pessoais reais neste formulário de demonstração.
+Não há testes automatizados. Os testes foram feitos manualmente:
 
-## Publicação
+- Navegação por todas as rotas, pelo menu e pelo submenu.
+- Formulário com campos vazios, CPF inválido e dados corretos.
+- Persistência: recarregar a página e conferir rascunho e lista de cadastros.
+- Validação do HTML no W3C Markup Validator.
 
-O workflow de GitHub Pages publica o conteúdo de `Alimento-que-abraca/` quando há atualização na branch `main`. No GitHub, configure **Settings > Pages > Build and deployment > Source** como **GitHub Actions**. A URL pública é exibida nas configurações de Pages após a primeira publicação.
+## Versionamento
+
+O projeto segue o GitFlow:
+
+- `main`: versões estáveis, marcadas com tag (ex.: v1.0.0).
+- `develop`: desenvolvimento contínuo.
+- `feature/*`: cada funcionalidade em uma branch própria.
+- `release/*` e `hotfix/*`: preparação de versões e correções urgentes.
+
+As mensagens de commit seguem o padrão Conventional Commits (`feat:`, `fix:`, `docs:`).
+
+## Manutenção
+
+- Textos, imagens e listas: `js/dados.js` e `js/templates.js`.
+- Cores, tipografia e espaçamentos: variáveis no início de `css/style.css`.
+- Para contribuir, crie uma branch `feature/nome` a partir da `develop` e abra um pull request.
+
+## Autoria
+
+Luana ([@Krhistinaluana](https://github.com/Krhistinaluana)), estudante de Engenharia de Software. Projeto de fins educacionais; a ONG e os dados de contato são fictícios.
