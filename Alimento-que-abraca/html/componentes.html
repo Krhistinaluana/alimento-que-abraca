@@ -11,9 +11,9 @@
 <header class="cabecalho">
 <div class="container barra">
 <p class="marca">Alimento que Abraça</p>
-<input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
+<input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir menu" aria-controls="menu-principal" aria-expanded="false">
 <label for="menu-toggle" class="menu-botao"><span class="icone"></span></label>
-<nav class="menu" aria-label="Principal">
+<nav class="menu" id="menu-principal" aria-label="Principal">
 <ul>
 <li><a href="../index.html">Início</a></li>
 <li class="tem-submenu">
@@ -62,10 +62,10 @@
 <section class="secao container" id="modais">
 <h2>Modal</h2>
 <p><a class="botao" href="#modal-voluntario">Abrir modal</a></p>
-<div class="modal" id="modal-voluntario" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+<div class="modal" id="modal-voluntario" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" aria-describedby="modal-descricao">
 <div class="modal-caixa">
 <h2 id="modal-titulo">Quero ser voluntário</h2>
-<p>Ajude na preparação e na distribuição das marmitas. Faça seu cadastro e entraremos em contato.</p>
+<p id="modal-descricao">Ajude na preparação e na distribuição das marmitas. Faça seu cadastro e entraremos em contato.</p>
 <div class="modal-acoes">
 <a class="botao" href="cadastro.html">Ir para o cadastro</a>
 <a class="botao botao-secundario" href="#modais">Fechar</a>
@@ -82,5 +82,6 @@
 <p>Instagram: @alimentoqueabraca</p>
 </div>
 </footer>
+<script type="module" src="../js/pagina-estatica.js"></script>
 </body>
 </html>
