@@ -166,10 +166,10 @@ ${ALERTAS.map(([tipo, titulo, texto, role]) => criarAlerta(tipo, titulo, texto, 
 <section class="secao container" id="modais">
 <h2>Modal</h2>
 <p><a class="botao" href="#modal-voluntario">Abrir modal</a></p>
-<div class="modal" id="modal-voluntario" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+<div class="modal" id="modal-voluntario" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" aria-describedby="modal-descricao">
 <div class="modal-caixa">
 <h2 id="modal-titulo">Quero ser voluntário</h2>
-<p>Ajude na preparação e na distribuição das marmitas. Faça seu cadastro e entraremos em contato.</p>
+<p id="modal-descricao">Ajude na preparação e na distribuição das marmitas. Faça seu cadastro e entraremos em contato.</p>
 <div class="modal-acoes">
 <a class="botao" href="#/cadastro">Ir para o cadastro</a>
 <a class="botao botao-secundario" href="#modais">Fechar</a>
